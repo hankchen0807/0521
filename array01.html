@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let grades=[70,50,84];
+        grades.push(35);
+        grades.push(100);
+        console.log(grades,length);
+        
+        for (i=0;i<grades.length;i++){
+            document.write(grades[i]);
+            if (i < grades.length - 1) {
+                document.write(", ");
+            }
+        }
+        document.write("<br>");
+
+        function sumArray(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum;
+        }
+
+        function averageArray(arr) {
+            return sumArray(arr) / arr.length;
+        }
+
+        document.write("<br>Total: " + sumArray(grades));
+        document.write("<br>Average: " + averageArray(grades));
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let man=new Object();
+        man.age=18;
+        if (man.age < 20){
+            console.log("未成年不能投票");
+            document.write("未成年不能投票<br>");
+        }
+        man.name="小劉";
+        man.talk=function(){
+            console.log("Hello 我是", this.name,"年齡",this.age);
+        }
+        document.write("Hello 我是",man.name);
+        document.write("<br>Hello 我今年",man.age,"歲");
+    </script>
+</body>
+</html>

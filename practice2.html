@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>我最喜歡的飲料</h2>
+    <script>
+        let drinks = ['珍珠奶茶', '波霸奶茶', 'Q粿奶茶', '奶茶',  '水果茶','玉米濃湯'];
+
+        document.write('<table border="1">');
+        for (let i = 0; i < 2; i++) { 
+            document.write('<tr>');
+            for (let j = 0; j < 6; j++) {
+                let index = i * 7 + j;
+                if (i === 0) {
+                    document.write('<td>飲料' + (j + 1) + '</td>'); 
+                } else if (i === 1 && j < drinks.length) {
+                    document.write('<td>' + drinks[j] + '</td>'); 
+                } else {
+                    document.write('<td></td>'); 
+                }
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+    </script>
+</body>
+</html>
